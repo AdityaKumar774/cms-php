@@ -1,4 +1,9 @@
-<pre><?php print_r($_POST); ?></pre>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+require_once ('../includes/class-db.php');
+$db = new DB;
+?>
 <html>
 <head>
     <title>Insert Post</title>

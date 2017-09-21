@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once ('../includes/class-db.php');
 $db = new DB;
+print_r($db->insert());
 ?>
 <html>
 <head>

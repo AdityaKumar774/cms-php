@@ -8,12 +8,16 @@ if(!class_exists('DB')){
                 printf ("Connect failed %s\n", $mysqli->connect_errno);
                 exit();
             }
-            return $mysqli;
+            $this->connection = $mysqli;
         }
         public function insert(){
+            $mysqli = $this->connection;
             $query = "
-            INSERT INTO 
+                INSERT INTO posts (post_title, post_content, post_category)
+                VALUES(title, content, content)
             ";
+            $result = $mysqli->query($query);
+            return $result;
         }
     }
 }

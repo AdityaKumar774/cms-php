@@ -2,6 +2,8 @@
   <dictionary name="knight">
     <words>
       <w>cman</w>
+      <w>postdata</w>
+      <w>postid</w>
     </words>
   </dictionary>
 </component>

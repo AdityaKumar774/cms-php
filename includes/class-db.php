@@ -5,7 +5,7 @@ if(!class_exists('DB')){
             $mysqli = new mysqli('localhost', 'root', '', 'cman');
 
             if($mysqli->connect_errno){
-                printf ($mysqli->connect_errno, "Connect failed %s\n");
+                printf ("Connect failed %s\n", $mysqli->connect_errno);
                 exit();
             }
             $this->connection = $mysqli;
@@ -20,6 +20,7 @@ if(!class_exists('DB')){
             while ($obj = $result->fetch_object()) {
                 $results[] = $obj;
             }
+            return $results;
         }
     }
 }

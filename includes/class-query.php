@@ -16,6 +16,7 @@ if(!class_exists('QUERY')){
             SELECT * FROM posts
             WHERE ID ='$postid'
             ";
+            return $db->select($query);
         }
     }
 }

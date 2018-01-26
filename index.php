@@ -26,8 +26,8 @@ elseif (!empty($cat)){
 <body>
 <?php foreach ($posts_array as $post); ?>
     <div class="post">
-        <h1> <?php echo $post->post_title; ?> </h1>
-        <p> <?php echo $post->post_content; ?> </p>
+        <h1><a href="?=<?php echo $post-[0]>ID; ?>"> <?php echo $post[0]->post_title; ?> </a></h1>
+        <p> <?php echo $post[0]->post_content; ?> </p>
     </div>
 </body>
 </html>

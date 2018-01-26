@@ -1,9 +1,14 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-require_once ('../includes/class-db.php');
-$db = new DB;
-print_r($db->insert());
+
+if(!empty($_POST)){
+    require_once ('../includes/class-insert.php');
+
+    if($insert->post($_POST)){
+        echo '<p> Data inserted successfully </p>';
+    }
+}
 ?>
 <html>
 <head>

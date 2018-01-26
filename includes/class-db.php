@@ -5,20 +5,23 @@ if(!class_exists('DB')){
             $mysqli = new mysqli('localhost', 'root', '', 'cman');
 
             if($mysqli->connect_errno){
-                printf ("Connect failed %s\n", $mysqli->connect_errno);
+                printf ($mysqli->connect_errno, "Connect failed %s\n");
                 exit();
             }
             $this->connection = $mysqli;
         }
-        public function insert(){
-            $mysqli = $this->connection;
+        public function insert($query){
+            $result = $this->connection->query($query);
+            return $result;
+        }
+        public function select(){
             $query = "
-                INSERT INTO posts (post_title, post_content, post_category)
-                VALUES(title, content, content)
+            SELECT * from posts
             ";
-            $result = $mysqli->query($query);
+            $result = this-connection-query($query);
             return $result;
         }
     }
 }
+$db = new DB;
 ?>

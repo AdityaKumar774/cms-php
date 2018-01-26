@@ -14,12 +14,12 @@ if(!class_exists('DB')){
             $result = $this->connection->query($query);
             return $result;
         }
-        public function select(){
-            $query = "
-            SELECT * from posts
-            ";
-            $result = this-connection-query($query);
-            return $result;
+        public function select($query){
+            $result = $this->connection->query($query);
+
+            while ($obj = $result->fetch_object()) {
+                $results[] = $obj;
+            }
         }
     }
 }

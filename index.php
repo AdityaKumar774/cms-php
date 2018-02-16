@@ -22,6 +22,7 @@ elseif (!empty($cat)){
 <html>
 <head>
     <title>Content Management System</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 <?php foreach($posts_array as $post): ?>
